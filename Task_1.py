@@ -46,16 +46,17 @@ try:
         else:
             print('You Enter invalid operator')
             break
-        choose = input("Do you want to continue Calculations ?  Y\\N..?").strip().lower()
-        if choose == "y":
+        choose_2 = input("Do you want to continue ?  Y\\N..?").strip().lower()
+        if choose_2 == "y":
+            choose = input("Do you want to perform Calculations or Transfer!  C\\T..?\n").strip().lower()
             continue
-        elif choose == "n":
+        elif choose_2 == "n":
             break
     else:
         if choose == "t":
             conversion = input("Do you want to convert from  1- Decimal to Binary \t 2- Binary to Decimal ...1 or 2? \n")
             if conversion == "2":
-                num = str(input("Enter Your Number: "))
+                num = str(input("Enter a binary Number: "))
                 num2 = int(num, 2)
                 print(f"-{num} will be=> {num2} in Decimal ")
 
